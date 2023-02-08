@@ -7,6 +7,8 @@ Zabbix template for the AVTECH Room Alert 3E environment monitor. This template 
 
 To use, create a new host with an SNMP Interface pointing at the IP address of the Room Alert 3E. This interface **must be set to SNMPv1** otherwise it will not be able to read the temperature.
 
+Add Preprocessing under the item 'Temperature Celsius': Arithmetic; Custom Multiplier = 0.01. This will convert the raw integer to the corrected temperature decimal.
+
 
 Includes a 'high' alert trigger for temperatures in excess of 25°C and a 'critical' alert trigger for temperatures in excess of 30°C.
 
